@@ -1,0 +1,39 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      # Collega la cartella locale src al server Apache per modifiche in tempo reale
+      - ./src:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    # Versione esatta di MariaDB richiesta dalle specifiche dell'esame
+    image: mariadb:11.8.6
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: locanda_di_montagna
+    ports:
+      - "3306:3306"
+    volumes:
+      # Volume persistente gestito da Docker per i file binari di MariaDB
+      - db_data:/var/lib/mysql
+      # Importazione automatica: esegue lo script SQL locale alla prima accensione
+      - ./database:/docker-entrypoint-initdb.d
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: root
+    depends_on:
+      - db
+
+volumes:
+  db_data:
