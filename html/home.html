@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="it" data-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Locanda di Montagna</title>
+        
+        <meta name="description" content="Vivi un'emozionante esperienza immerso nella natura e concediti momenti di relax con i servizi e l'ospitalità di [Nome Locanda].">
+        <meta name="keywords" content="[PLACEHOLDER] Locanda, Montagna">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet" data-dc-tpl="2">
+
+        <link rel="icon" type="image/svg+xml" href="../resources/icon.svg">
+        <link rel="apple-touch-icon" sizes="180x180" href="../resources/icon.svg">
+        <link rel="stylesheet" href="../css/style.css" media="screen">
+    </head>
+
+    <body>
+        <a class="aiutiNavigazione" href="#contenuto">Salta al contenuto</a>
+        
+        <header>
+            <div class="header-container">
+                <div class="header">
+                    <div class="logo">
+                        <img alt="Home" src="../resources/icon.svg" width="60" height="60">
+                        <span lang="it">La Locanda di Montagna</span>
+                    </div>
+                
+                    <nav id="menu" aria-label="Menù di Navigazione">
+                        <ul>
+                            <li class="currentLink"><span lang="en">Home</span></li>
+                            <li><a href="camere.html">Camere</a></li>
+                            <li><a href="ristorante.html">Ristorante</a></li>
+                            <li><a href="attivita.html">Attività</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="header-buttons">
+                    
+                        <label class="toggle">
+                            <input type="checkbox" id="DarkLight" name="DarkLight" aria-label="Attiva o disattiva il tema scuro"/>
+                            <span class="slider" aria-hidden="true"></span>
+                        </label>
+                        
+                        <div class="user-menu">
+                            <button class="user-btn" aria-label="Menu utente" aria-haspopup="true" aria-expanded="false">
+                                <img src="../resources/account_circle.svg" alt="" class="user-icon">
+                            </button>
+
+                            <ul class="dropdown-menu">
+                                <li><a href="accesso.php">Accedi</a></li>
+                                <li><a href="accesso.php">Registrati</a></li>
+
+                                <div class="divider"></div>
+
+                                <li><a href="prenotazioni.php">Le mie prenotazioni</a></li>
+                                <li><a href="itinerario.php">I miei itinerari</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>                         
+            </div>
+        </header>
+        
+
+
+        <nav aria-label="Ti trovi in:" id="breadcrumb">
+            <ol>
+                <li aria-current="page"><span lang="en">Home</span></li>
+            </ol>
+        </nav>
+
+
+
+        <main id="contenuto" tabindex="-1">
+
+            <!-- 1. La sezione con l'immagine (Hero section) -->
+            <section class="parallax-bg"></section>
+
+            <!-- 2. Lo spaziatore (crea il ritardo) -->
+            <div class="spacer"></div>
+
+            <!-- 2. Sezione con il testo -->
+            <section class="content-section">
+                
+                <h1>La montagna al tuo ritmo</h1>
+                    <p>La nostra locanda ti accoglie tra natura, buon cibo ed esperienze autentiche. Qui ogni stagione ha il suo fascino, 
+                        tra panorami mozzafiato, sapori del territorio e attività per vivere la montagna in modo speciale.</p>
+                    <p><span lang="en">Relax</span>, natura e tradizione ti aspettano.</p>
+                    
+
+                    <section id="sezScopri">
+
+                        <h2>Scopri la nostra locanda</h2>
+                        <p>Un luogo speciale, dove ogni dettaglio è pensato per farti sentire a casa.</p>
+  
+                        <div class="card">
+
+                            <div class="cardText">    
+                                <h3>Camere</h3>
+                                <p><span lang="en">Comfort</span> e <span lang="en">relax</span> in ambienti caldi e accoglienti, con vista sulle montagne.</p>
+
+                                <a href="camere.html">Scopri le camere</a>
+                            </div>
+                                
+                            <img src="../resources/img/Camere.png">
+                        </div>
+                        <div class="card">
+
+                            <img src="../resources/img/Ristorante.png">
+
+                            <div class="cardText">
+                                <h3>Ristorante</h3>
+                                <p>Piatti genuini e prodotti del territorio, per un'esperienza di gusto autentica.</p>
+
+                                <a href="camere.html">Prenota un tavolo</a>
+                            </div>
+                            
+                        </div>
+
+                        <div class="card">
+
+                            <div class="cardText">
+                                <h3>Attività</h3>
+                                <p>Escursioni, sport e natura a portata di mano, per vivere la montagna ogni giorno.</p>
+
+                                <a href="camere.html">Vedi le attività</a>
+                            </div>
+                            
+                            <img src="../resources/img/Attivita.png">
+                        </div>
+                    </section>
+
+                    <section id="sezPianifica">
+                        <div class="content">
+
+                            <p class="sectionTitle">itinerari personalizzati</p>
+                            <h2>Pianifica il tuo soggiorno in modo unico</h2>
+                            <p class="description">Crea la tua esperienza in modo personalizzato, scegliendo tra le attività, le escursioni e i luoghi più suggestivi della nostra zona.</p>
+                            
+                            <ol>
+                                <li><span class="option">Scegli</span> <p>Attività, escursioni, e luoghi che ti ispirano.</p></li>
+                                <li><span class="option">Componi</span> <p>Aggiungi camera e tavolo al ristorante al tuo programma.</p></li>
+                                <li><span class="option">Ritrova</span> <p>Il tuo itinerario ti aspetta nell'area personale.</p></li>
+                            </ol>
+                            <a class="linkScopri" href="itinerari.html">Crea il tuo itinerario</a>
+                        </div>
+                        <img src="../resources/img/compass.png">
+                    </section>
+
+            </section>           
+        </main>
+
+        <footer>
+            <dl>
+                <dt>Navigazione</dt>
+                <dd class="linkCorrente"><span lang="en">Home</span></dd>
+                <dd><a href="camere.html">Camere</a></dd>
+                <dd><a href="ristorante.html">Ristorante</a></dd>
+                <dd><a href="attivita.html">Attività</a></dd>
+                <dt>Area personale</dt>
+                <dd><a href="accesso.html">Accedi</a></dd>
+                <dd><a href="registrazione.html">Registrati</a></dd>
+                <dd><a href="prenotazioni.html">Le mie prenotazioni</a></dd>
+                <dd><a href="itinerari.html">I miei itinerari</a></dd>
+            </dl>
+
+            <div id="contatti">
+                <h2>Contatti</h2>
+                <p>Via della Montagna, 12</p>
+                <p>Pratello (TN)</p>
+                <!--Controllare leggibilità screen reader-->
+                <p><a href="tel:+390465123456">+390465123456</a></p>
+                <p><a href="mailto:info@lalocanda.it">info@lalocanda.it</a></p>
+            </div>
+
+            <div id="newsletter">
+                <h2>Resta aggiornato</h2>
+                <p>Iscriviti alla nostra newsletter.</p>
+                <form action="">
+                        <label for="email">Email:</label>
+                        <!--320 è il limite massimo di lunghezza di un indirizzo email, probabilmente è comunque troppo-->
+                        <input type="email" id="email" name="email" maxlength="320"/>
+                        <input type="submit" value="Iscriviti"/>
+                </form>
+            </div>
+
+            <div id="copyright">
+                <p>©2025 La Locanda di Montagna.</p>
+                <p>Tutti i diritti riservati.</p>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="accessibilita.html">Accessibilità</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>
