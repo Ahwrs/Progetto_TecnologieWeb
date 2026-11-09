@@ -1,0 +1,22 @@
+name: W3C HTML Validation
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  validate-html:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run W3C HTML Validator
+        uses: cycjimmy/html5-validator-action@v2
+        with:
+          root: .
+          # Ignora file o directory specifiche se necessario (es. cartelle di build)
+          # ignore: "node_modules/|build/"
