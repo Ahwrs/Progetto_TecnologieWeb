@@ -166,14 +166,16 @@
                     </ul>
                 </nav>
 
-                <address id="contatti" aria-label="Menù dei contatti">
+                <section id="contatti" aria-label="Menù dei contatti">
                     <h4>Contatti</h4>
-                    <p>Via della Montagna, 12</p>
-                    <p>Pratello (TN)</p>
-                    
-                    <p><a href="tel:+390465123456">Tel: +390465123456</a></p>
-                    <p><a href="mailto:info@lalocanda.it"><span lang="en">Email</span>: info@lalocanda.it</a></p>
-                </address>
+                    <address>
+                        <p>Via della Montagna, 12</p>
+                        <p>Pratello (TN)</p>
+                        
+                        <p><a href="tel:+390465123456">Tel: +390465123456</a></p>
+                        <p><a href="mailto:info@lalocanda.it"><span lang="en">Email</span>: info@lalocanda.it</a></p>
+                    </address>
+                </section>
             </div>
 
             
@@ -207,18 +209,18 @@
                 </nav>
             </div>
         </footer>
+
+        <script>
+            const headerContainer = document.querySelector('.header-container');
+
+            window.addEventListener('scroll', () => {
+                // Se l'utente ha scrollato più di 50px, aggiungi la classe, altrimenti rimuovila
+                if (window.scrollY > 50) {
+                    headerContainer.classList.add('active');
+                } else {
+                    headerContainer.classList.remove('active');
+                }
+            });
+        </script>
     </body>
-
-    <script>
-        const headerContainer = document.querySelector('.header-container');
-
-        window.addEventListener('scroll', () => {
-            // Se l'utente ha scrollato più di 50px, aggiungi la classe, altrimenti rimuovila
-            if (window.scrollY > 50) {
-                headerContainer.classList.add('active');
-            } else {
-                headerContainer.classList.remove('active');
-            }
-        });
-    </script>
 </html>
