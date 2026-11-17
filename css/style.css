@@ -1,10 +1,8 @@
 :root{
-
 	--radius: 12px;
 }
 
 [data-theme='light'] {
-	
 	--bg: #F1DFBC;
 	--surface: #FFF;
 	--header: #F8EFDE;
@@ -23,7 +21,6 @@
 }
 
 [data-theme='dark'] {
-
 	--bg: #2E2415;
 	--surface: #4A3C28;
 	--header: #3C301F;
@@ -39,10 +36,8 @@
 	--plan: #362B1B;
 	--footer: #241C10;
 	--hero-bg: #1E170D;
-	
 }
 
-/* For browsers that support clamp  */
 @supports (font-size: clamp(1rem, 1vi, 1rem)) {
 	:root {
 		--font-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
@@ -55,7 +50,6 @@
 	}
 }
 
-/* For browsers that don't support clamp */
 @supports not (font-size: clamp(1rem, 1vi, 1rem)) {
 	:root {
 		--font-sm: 0.8rem;
@@ -99,7 +93,6 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-
 	font-family: 'Lora', Georgia, serif;
 }
 
@@ -115,7 +108,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .jump-to-content:focus {
-
 	width: auto;
 	height: auto;
 	z-index: 1000;
@@ -129,37 +121,24 @@ h1,h2,h3,h4,h5,h6 {
 
 a:visited{ color: var(--eyebrow);}
 
-/*
-
-	SEZIONE HEADER
-
-*/
-
 header {
-	
-    position: sticky;
-    top: 1em;
-	z-index: 100;
+    position: fixed;
+	justify-self: center;
+	z-index: 999;
     padding: 1em 2em;
 	max-width: 75em;
-	margin: 1em auto;
+	margin: 1em;
     gap: 2em;
 	border-radius: 1em;
 	
-
 	background-color: color-mix(in srgb, var(--header) 80%, transparent);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px); /* Per Safari */
+    -webkit-backdrop-filter: blur(12px);
 
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
 } 
 
-/* 
-
-	SEZIONE LOGO
-
-*/
 #menu, 
 .header-buttons,
 .logo, 
@@ -180,16 +159,11 @@ header {
 }
 
 .logo a{
-
 	text-decoration: none;
 	color: var(--text)
 }
 
-/*
-	SEZIONE DI NAVIGAZIONE 
-*/
 #menu ul {
-
     padding: 0;
     display: flex;
     justify-content: center;
@@ -209,35 +183,23 @@ header {
 	margin-bottom: -2em;
 	transition: 0.3s ease-in-out;
 }
+#menu > ul > li > a:visited{ color: var(--eyebrow); }
 
 .currentLink{
-
 	font-weight: 600;
 	text-decoration: underline;
-	
     text-underline-offset: 0.8em;
 	text-decoration-thickness: 15%;
 	text-decoration-color: var(--accent);
 }
 
 #menu > ul > li > a:hover {
-
 	font-size: 1.2em;
 	text-decoration: underline;
     text-underline-offset: 0.5em;
 }
 
-#menu > ul > li > a:visited {
-	color: var(--text);
-}
-
-/*
-
-	SEZIONE BUTTON CHIARO/SCURO
-
-*/
 .toggle {
-
 	position: relative;
 	display: inline-block;
 	font-size: 1rem; 
@@ -266,7 +228,6 @@ header {
 }
 
 .slider {
-
 	position: absolute;
 	cursor: pointer;
 	top: 0;
@@ -277,7 +238,6 @@ header {
 }
 
 .slider:before {
-
 	position: absolute;
 	content: "";
 	height: 1.75em;  
@@ -295,25 +255,17 @@ header {
 }
 
 input:checked + .slider:before {
-	
 	transform: translateX(1.75em); 
 	background-color: #222;
 	background-image: url("../resources/sun.svg");
 }
 
-/*
-
-	SEZIONE AREA PERSONALE
-
-*/
 .user-menu {
-
     position: relative;
     display: inline-block;
 }
 
 .user-btn {
-
     background: none;
     border: none;
     color: #000;
@@ -328,7 +280,6 @@ input:checked + .slider:before {
 }
 
 .user-btn:hover, .user-btn:focus-visible {
-
     background-color: var(--line);
 }
 
@@ -337,8 +288,8 @@ input:checked + .slider:before {
     height: 2.5em;
 }
 .user-icon{ color: var(--text);}
-.dropdown-menu {
 
+.dropdown-menu {
     position: absolute;
     top: calc(100% + 0.5em); 
     right: 0; 
@@ -350,7 +301,6 @@ input:checked + .slider:before {
     border-radius: 0.5em;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     border: 1px solid var(--accent);
-    
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
@@ -380,28 +330,24 @@ input:checked + .slider:before {
 }
 
 .dropdown-menu > li:nth-last-child(2){
-	
 	margin-top: 3em;
 	border-top: 1px solid var(--accent);
 }
 
-/*
-
-	SEZIONE BREADCRUMB
-
-*/
-#breadcrumb{
+#breadcrumb {
+	position: absolute;
+	top: 8.5em;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 999;
 	
 	background-color: var(--surface);
-	
-	justify-self: center;
-    text-align: center;
-    border-radius: 1em;
-    font-size: var(--font-sm);
+	text-align: center;
+	border-radius: 1em;
+	font-size: var(--font-sm);
 }
 
 #breadcrumb > ol {
-    
 	list-style: none;
     display: flex;
     text-align: center;
@@ -411,35 +357,125 @@ input:checked + .slider:before {
 
 #breadcrumb > ol > li{ list-style-type: none;}
 #breadcrumb > ol > li:last-child {font-weight: bold;}
+#breadcrumb > ol > li + li::before {
+    content: '/' / '';
+    margin-inline: 0.5em;
+}
 
-/*
+.hero-section {
+    position: relative;
+    height: 100vh; 
+    min-height: 650px;
+    display: flex;
+    align-items: center; 
 
-	SEZIONE DI INTRODUZIONE
+    background-image: url("../resources/img/bg.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 2em; 
+}
 
-*/
+.hero-section::before {
 
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(30, 23, 13, 0.7) 60%, rgba(30, 23, 13, 0) 100%);
+    z-index: 1;
+}
 
-/*
+.hero-content {
 
-	SEZIONE "SCOPRI"
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 75em;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 42em); 
+    margin-top: 6em; 
+}
 
-*/
+.eyebrow {
+    color: #F2B25C;
+    font-family: 'Lexend', sans-serif;
+    font-size: var(--font-sm);
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.eyebrow::before {
+
+    content: "";
+    display: block;
+    width: 3em;
+    height: 1px;
+    background-color: #F2B25C;
+}
+
+.hero-content h1 {
+
+    font-family: 'Lora', serif;
+    font-size: var(--font-xxl);
+    line-height: 1.1;
+    color: #FFF;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    margin-bottom: 0.5em;
+    font-weight: 500;
+}
+
+.hero-content h1 span {
+    color: #F2B25C;
+}
+
+.hero-desc {
+
+    font-family: 'Lexend', sans-serif;
+    font-size: var(--font-base);
+    color: #F6EEDD;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+    line-height: 1.6;
+    margin-bottom: 2.5em;
+}
+
+.hero-tagline {
+
+    color: #F2B25C;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: var(--font-base);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-tagline svg {
+    width: 1.8em;
+    height: 1.8em;
+    stroke: #F2B25C;
+}
+
 #sezScopri{
-
 	max-width: 60em;
-	padding: 2em;
+	padding: 4em 2em;
 	margin: auto;
 }
 
 #sezScopri h2{ font-size: var(--font-md);}
 #sezScopri p, #sezPianifica .description{
-
 	color: var(--secondary);
 	margin-bottom: 2em;
 }
 
 .card {
-
     display: flex;
     background-color: var(--surface);
     border: 1px solid var(--accent);
@@ -449,14 +485,12 @@ input:checked + .slider:before {
 }
 
 .card img {
-
     width: 50%;
     object-fit: cover; 
     flex-shrink: 0; 
 }
 
 .card .cardText {
-    
 	padding: 2em;
     flex: 1; 
     display: flex;
@@ -465,12 +499,10 @@ input:checked + .slider:before {
 }
 
 .cardText h3{
-
 	font-size: var(--font-md);
 }
 
 .card a{
-	
 	color: var(--accent);
 	text-decoration: none;
 	font-size: var(--font-sm);
@@ -479,20 +511,13 @@ input:checked + .slider:before {
 
 .card a:hover, 
 .card a:focus{
-
 	text-decoration: underline;
     text-underline-offset: 0.8em;
 	text-decoration-thickness: 15%;
 	text-decoration-color: var(--accent);
 }
 
-/*
-
-	SEZIONE "PAINIFICA"
-
-*/
 #sezPianifica {
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -518,7 +543,6 @@ input:checked + .slider:before {
 }
 
 #sezPianifica h4{
-	
 	font-family: 'Lexend', system-ui, sans-serif;
 	text-transform: uppercase;
 	font-size: 0.7em;
@@ -528,7 +552,6 @@ input:checked + .slider:before {
 }
 
 #sezPianifica .sub-title{
-
 	font-family: 'Lora', Georgia, serif;
 	font-size: var(--font-md);
 }
@@ -547,18 +570,15 @@ input:checked + .slider:before {
 }
 
 #sezPianifica ol li::before {
-   
 	content: counter(step-counter);     
     position: absolute;
     left: 0;
     top: 0;
-    
     display: flex;
     align-items: center;
     justify-content: center;
     width: 2em;
     height: 2em;
-    
     border: 2px solid var(--accent);
     border-radius: 50%;
     color: var(--accent);
@@ -567,13 +587,11 @@ input:checked + .slider:before {
 
 #sezPianifica .option{font-weight: 600;}
 #sezPianifica ol li p{
-
 	font-size: var(--font-sm);
 	color: var(--secondary);
 }
 
 #sezPianifica .content a{
-
 	display: inline-block;
 	color: var(--on-accent);
 	font-size: var(--font-sm);
@@ -585,24 +603,16 @@ input:checked + .slider:before {
 }
 
 #sezPianifica > .content > a:hover{
-	
 	opacity: 0.7;
 }
 
-/*
-
-	SEZIONE FOOTER
-
-*/
 .sez-logo{
-
 	display: block;
 	text-align: center;
 	margin-top: 2em;
 }
 
 footer > span{
-
 	display: block;
 	text-align: center;
 	font-size: var(--font-md);
@@ -610,18 +620,15 @@ footer > span{
 }
 
 .nav-footer{
-
 	display: grid;
 	margin: 3em;
 	padding: 0em 2em;
 	grid-template-columns: 1fr 1fr 1fr;
 	justify-items: center;
-
 }
 
 .nav-footer h4 { color: var(--accent);}
 .nav-footer h4, ul, p{
-	
 	font-family: 'Lexend', system-ui, sans-serif;
 	font-size: var(--font-sm);
 	line-height: 1.6;
@@ -636,24 +643,25 @@ footer > span{
 }
 
 footer a{
-
 	text-decoration: none;
 	color: var(--text);
 }
+footer a:hover{
+	text-decoration: underline;
+    text-underline-offset: 0.5em;
+	text-decoration-thickness: 10%;
+}
 
 .nav-footer .current-footer{ 
-	
 	font-weight: 600;
 	text-decoration: underline;	
     text-underline-offset: 0.2em;
 	text-decoration-thickness: 15%;
 	text-decoration-color: var(--accent);
-
 }
 
 #newsletter{ text-align: center;}
 .newsletter-form {
-
     display: flex;
     align-items: stretch;
 	justify-content: center;
@@ -664,9 +672,7 @@ footer a{
     max-width: 22em;
 }
 
-
 .newsletter-form input[type="email"] {
-
     flex: 1; 
     border: none;
     outline: none;
@@ -679,7 +685,6 @@ footer a{
 
 .newsletter-form input[type="email"]::placeholder { color: #888;}
 .newsletter-form button[type="submit"] {
-
     background-color: var(--accent);
     color: var(--on-accent); 
     border: none;
@@ -693,13 +698,11 @@ footer a{
 
 .newsletter-form button[type="submit"]:hover { opacity: 0.8;}
 .newsletter-form button svg {
-
     width: 1.2em;
     height: 1.2em;
 }
 
 .disclaimers{
-
 	display: flex;
 	justify-content: space-between;
 	margin-top: 2em;
@@ -708,7 +711,6 @@ footer a{
 }
 
 .disclaimers > nav > ul > li{
-
 	display: inline;
 	list-style-type: none;
 	margin: 0em 2em;

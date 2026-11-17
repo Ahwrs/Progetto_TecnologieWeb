@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="it" data-theme="dark">
+<html lang="it" data-theme="light">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -103,19 +103,21 @@
 
         <main id="contenuto" tabindex="-1">
 
-            <!-- 1. La sezione con l'immagine (Hero section) -->
-            <section class="parallax-bg"></section>
-
-            <!-- 2. Lo spaziatore (crea il ritardo) -->
-            <div class="spacer"></div>
-
-            <!-- 2. Sezione con il testo -->
-            <section class="content-section">
+            <section class="hero-section">
+                <div class="hero-content">
+                    <p class="eyebrow">LOCANDA DI MONTAGNA</p>
+                    <h1>La montagna,<br><span>al tuo ritmo</span></h1>
+                    
+                    <p class="hero-desc">
+                        La nostra locanda ti accoglie tra natura, buon cibo e esperienze autentiche. 
+                        Qui ogni stagione ha il suo fascino, tra panorami mozzafiato, sapori del territorio 
+                        e attività per vivere la montagna in modo speciale.
+                    </p>
+                    
+                    <p class="hero-tagline"><span lang="en">Relax</span>, natura e tradizione ti aspettano!</p>
+                </div>
+            </section>
                 
-                <h1>La montagna al tuo ritmo</h1>
-                    <p>La nostra locanda ti accoglie tra natura, buon cibo ed esperienze autentiche. Qui ogni stagione ha il suo fascino, 
-                        tra panorami mozzafiato, sapori del territorio e attività per vivere la montagna in modo speciale.</p>
-                    <p><span lang="en">Relax</span>, natura e tradizione ti aspettano.</p>
                     
 
                     <section id="sezScopri">
@@ -176,8 +178,6 @@
                         </div>
                         <img alt="Mappa e bussola sul tavolo con vista sulle montagne" src="../resources/img/compass.png">
                     </section>
-
-            </section>           
         </main>
 
         <footer>
@@ -220,7 +220,7 @@
                 <nav aria-label="Menù di navigazione del footer">
                     <h4>Navigazione</h4>
                     <ul>
-                        <li class="current-footer"><span lang="en">Home</span></li>
+                        <li class="current-footer" aria-label="Pagina corrente"><span lang="en">Home</span></li>
                         <li><a href="camere.html">Camere</a></li>
                         <li><a href="ristorante.html">Ristorante</a></li>
                         <li><a href="attivita.html">Attività</a></li>
@@ -242,7 +242,7 @@
                     <p>Via della Montagna, 12</p>
                     <p>Pratello (TN)</p>
                     
-                    <p><a href="tel:+390465123456">Tel: +390465123456</a></p>
+                    <p><a href="tel:+390465123456">Tel: +39 046 512 3456</a></p>
                     <p><a href="mailto:info@lalocanda.it"><span lang="en">Email</span>: info@lalocanda.it</a></p>
                 </address>
             </div>
