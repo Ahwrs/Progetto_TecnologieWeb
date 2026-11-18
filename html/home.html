@@ -69,7 +69,7 @@
             <div class="header-buttons">
                     
                 <label class="toggle">
-                    <input type="checkbox" id="DarkLight" name="DarkLight" aria-label="Attiva o disattiva il tema scuro"/>
+                    <input type="checkbox" id="DarkLight" name="DarkLight" aria-label="Attiva o disattiva il tema scuro">
                     <span class="slider" aria-hidden="true"></span>
                 </label>
                         
@@ -254,9 +254,9 @@
                 <h4>Resta aggiornato</h4>
                 <p>Iscriviti alla nostra newsletter.</p>
                 
-                <form action="" class="newsletter-form">
+                <form class="newsletter-form">
                     <label for="email" class="sr-only"><span lang="en">Email</span>:</label>
-                    <input type="email" id="email" name="email" placeholder="La tua email" maxlength="50"/>
+                    <input type="email" id="email" name="email" placeholder="La tua email" maxlength="50">
                     <button type="submit" aria-label="Iscriviti">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -279,17 +279,4 @@
             </div>
         </footer>
     </body>
-
-    <script>
-        const headerContainer = document.querySelector('.header-container');
-
-        window.addEventListener('scroll', () => {
-            // Se l'utente ha scrollato più di 50px, aggiungi la classe, altrimenti rimuovila
-            if (window.scrollY > 50) {
-                headerContainer.classList.add('active');
-            } else {
-                headerContainer.classList.remove('active');
-            }
-        });
-    </script>
 </html>

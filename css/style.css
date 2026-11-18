@@ -124,7 +124,7 @@ a:visited{ color: var(--eyebrow);}
 header {
     position: fixed;
 	justify-self: center;
-	z-index: 999;
+	z-index: 1000;
     padding: 1em 2em;
 	max-width: 75em;
 	margin: 1em;
